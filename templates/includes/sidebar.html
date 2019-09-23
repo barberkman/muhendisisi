@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="col-md-4 content-right">
+ <div class="categories">
+     <h3>Kategoriler</h3>
+     <ul>
+     <li><a href="{% url 'article:category' 1 %}">Temel Elektronik</a></li>
+     <li><a href="{% url 'article:category' 2 %}">Elektronik Tasarım</a></li>
+     <li><a href="{% url 'article:category' 3 %}">Endüstriyel Otomasyon</a></li>
+     <li><a href="{% url 'article:category' 4 %}">C Programlama</a></li>
+     <li><a href="{% url 'article:category' 5 %}">VHDL-FPGA</a></li>
+     <li><a href="{% url 'article:category' 6 %}">PIC Programlama</a></li>
+     <li><a href="{% url 'article:category' 0 %}">Diğer</a></li>
+     </ul>
+ </div>
+    <br><br>
+ <div class="clearfix"></div>
+
+
+ <div class="recent">
+     <ul>
+            <h3>Son Yazılar</h3>
+            {% for article in articles %}
+                {% if article.isConfirmed %}
+                     <li><a href="{% url 'article:article' article.id %}">{{article.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+        	<div class="clearfix"></div><br><br>
+	 		<li><a href="{% url 'article:articlesindex' %}">MAKALE ARŞİVİ</a></li>
+     </ul>
+ </div>
+
+ <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>

@@ -1,0 +1,46 @@
+{% load static %}
+
+{% include 'layout.html' %}
+
+{% block body %}
+
+<div class="single">
+
+{% if request.user.groups.all.0.name == 'Admin' or request.user.groups.all.0.name == 'Editör' %}
+    <div class="container" >
+      {% if article.isConfirmed %}
+        <a href="/articles/unconfirm/{{article.id}}" class="btn btn-danger" >Onayı Geri Al</a>
+      {% else %}
+        <a href="/articles/confirm/{{article.id}}" class="btn btn-success" >Onayla</a>
+      {% endif %}
+    <br><br><br>
+    </div>
+{% endif %}
+
+	 <div class="container">
+		  <div class="col-md-8 single-main">
+			  <div class="single-grid">
+                    <h3 style="color: #00AEFF">{{ article.title }}</h3>
+                    <br><br>
+                    {% if article.mainImage %}
+    					<img src="{{article.mainImage.url}}" style="width: 100%; max-height: 400px;" alt=""/>
+                    {% endif %}
+                    <br><br>
+					<p>{{article.content|safe}}</p>
+			  </div>
+                <ul class="comment-list">
+                   <h5 class="post-author_head">Yazar: <a href="#" title="Yazarın Tüm Makeleleri">{{article.author.username}}</a></h5>
+                   <li><img src="images/avatar.png" class="img-responsive" alt="">
+                   <div class="desc">
+                   <p>Yayınlanma Tarihi: {{article.createdDate.date}}</p>
+                   </div>
+                   <div class="clearfix"></div>
+                   </li>
+                </ul>
+		  </div>
+         {% include 'includes/sidebar.html' %}
+          <div class="clearfix"></div>
+     </div>
+</div>
+
+{% endblock body %}

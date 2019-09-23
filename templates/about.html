@@ -1,0 +1,129 @@
+{% include "layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-8 content-main">
+				 <div class="content-grid">
+					 <div class="content-grid-info">
+                        <h3>Hakkımızda</h3>
+                        <hr>
+
+                        <p style="text-align:left"><span style="background:#ffffff"><span style="line-height:100%"><span style="orphans:2"><span style="widows:2"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><font color="#212529"><font face="Arial, serif"><span style="letter-spacing:0.8pt">Kendine &ouml;zg&uuml; anlatımımızla: m&uuml;hendisisi.com</span></font></font></font></font></font></span></span></span></span></p>
+
+                        <p style="text-align:left"><span style="background:#ffffff"><span style="line-height:100%"><span style="orphans:2"><span style="widows:2"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><font color="#212529"><font face="Arial, serif"><span style="letter-spacing:0.8pt">Elektrik -Elektronik M&uuml;hendisliği mezunu beş arkadaşın 2019 yılında kendine &ouml;zg&uuml; anlatımlarıyla T&uuml;rk&ccedil;e literat&uuml;r oluşturmak i&ccedil;in bir araya geldiği tamamen g&ouml;n&uuml;ll&uuml;l&uuml;k esaslı bir oluşumdur.m&uuml;hendisisi, m&uuml;hendisliğin temel bilgilerini paylaşmanın yanı sıra sekt&ouml;rdeki gelişmeleri, yenilikleri ve ger&ccedil;ekleştirdikleri projeleri paylaşmayı hedeflemiştir.</span></font></font></font></font></font></span></span></span></span></p>
+
+                        <p style="text-align:left"><span style="background:#ffffff"><span style="line-height:100%"><span style="orphans:2"><span style="widows:2"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><font color="#212529"><font face="Arial, serif"><span style="letter-spacing:0.8pt">M&uuml;hendisisi, &ouml;ğrencilik hayatlarında karşılaştıkları zorluklardan tecr&uuml;be edinerek &ccedil;ıktıkları bu yolda sizin de fikirlerinizi &ouml;nemsemektedir. M&uuml;hendisisi yetkin olduğumuz alanlarda bilgi paylaşımı yapılan bir platformdan daha &ccedil;ok merak ettiğiniz, T&uuml;rk&ccedil;e literat&uuml;r sıkıntısı yaşadığınız konuları paylaşabileceğiniz, beraber bir &ccedil;&ouml;z&uuml;m yolu arayacağınız platform olmayı hedeflemiştir.</span></font></font></font></font></font></span></span></span></span></p>
+
+                        <p style="text-align:left"><span style="background:#ffffff"><span style="line-height:100%"><span style="orphans:2"><span style="widows:2"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><font color="#212529"><font face="Arial, serif"><span style="letter-spacing:0.8pt">T&uuml;rkiye&rsquo;nin her yerinden bu işe g&ouml;n&uuml;l vermiş, &ccedil;abalayan, paylaşmayı seven kişilerle bir araya gelme arzusu bu yoldaki en b&uuml;y&uuml;k motivasyonumuzdur .</span></font></font></font></font></font></span></span></span></span></p>
+
+                        <p style="text-align:left"><span style="background:#ffffff"><span style="line-height:100%"><span style="orphans:2"><span style="widows:2"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><font color="#212529"><font face="Arial, serif"><span style="letter-spacing:0.8pt">G&ouml;r&uuml;şleriniz, şikayetleriniz ve araştırma yapılmasını istediğiniz konular i&ccedil;in bize m&uuml;hendisisi@gmail.com adresinden ulaşabilirsiniz.</span></font></font></font></font></font></span></span></span></span></p>
+
+					 </div>
+				 </div>
+			  </div>
+
+             {% include 'includes/sidebar.html' %}
+
+		  </div>
+	  </div>
+</div>
+
+<!--booststrap-->
+<link href="{%  static 'css/our_team/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--//booststrap end-->
+<!-- font-awesome icons -->
+<link href="{%  static 'css/font-awesome.min.css' %}" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!--stylesheets-->
+<link href="{%  static 'css/our_team/style.css' %}" rel='stylesheet' type='text/css' media="all">
+<!--//stylesheets-->
+<link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+
+{#<!-- team -->#}
+{#<section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">#}
+{# <div class="container py-lg-5 py-md-4 py-sm-4 py-3">#}
+{#    <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Tecrübeli Kadromuz</h3>#}
+{#    <div class="row">#}
+{#       <div class="col-lg-3 col-md-6 col-sm-6 team-row-grid">#}
+{#          <div class="team-grid">#}
+{#             <div class="team-image mb-3">#}
+{#                <img src="{% static 'images/baris.JPEG' %}" alt="" class="img-fluid" style="width: 320px; height: 340px;">#}
+{#                <div class="social-icons">#}
+{#                   <a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-linkedin" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>#}
+{#                </div>#}
+{#             </div>#}
+{#             <h5 class="post-author_head"> <a href="{% url 'article:viewbyauthor' 6 %}" title="Yazarın Tüm Makeleleri">Barış Berkman</a></h5>#}
+{#          </div>#}
+{#       </div>#}
+{#       <div class="col-lg-3 col-md-6 col-sm-6 team-row-grid">#}
+{#          <div class="team-grid">#}
+{#             <div class="team-image mb-3">#}
+{#                <img src="{% static 'images/fuat.JPEG' %}" alt="" class="img-fluid" style="width: 320px; height: 340px;">#}
+{#                <div class="social-icons">#}
+{#                   <a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-linkedin" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>#}
+{#                </div>#}
+{#             </div>#}
+{#             <h5 class="post-author_head"> <a href="{% url 'article:viewbyauthor' 5 %}" title="Yazarın Tüm Makeleleri">Fuat Üstüner</a></h5>             #}
+{#          </div>#}
+{#       </div>#}
+{#       <div class="col-lg-3 col-md-6 col-sm-6 team-row-grid">#}
+{#          <div class="team-grid">#}
+{#             <div class="team-image mb-3">#}
+{#                <img src="{% static 'images/ozan.JPEG' %}" alt="" class="img-fluid" style="width: 320px; height: 340px;">#}
+{#                <div class="social-icons">#}
+{#                   <a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-linkedin" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>#}
+{#                </div>#}
+{#             </div>#}
+{#             <h5 class="post-author_head"> <a href="{% url 'article:viewbyauthor' 2 %}" title="Yazarın Tüm Makeleleri">Ozan Yalçın</a></h5>             #}
+{#          </div>#}
+{#       </div>#}
+{#       <div class="col-lg-3 col-md-6 col-sm-6 team-row-grid">#}
+{#          <div class="team-grid">#}
+{#             <div class="team-image mb-3">#}
+{#                <img src="{% static 'images/hasancan.JPEG' %}" alt="" class="img-fluid" style="width: 320px; height: 340px;">#}
+{#                <div class="social-icons">#}
+{#                   <a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-linkedin" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>#}
+{#                </div>#}
+{#             </div>#}
+{#             <h5 class="post-author_head"> <a href="{% url 'article:viewbyauthor' 4 %}" title="Yazarın Tüm Makeleleri">Hasan Can Yurt</a></h5>             #}
+{#          </div>#}
+{#       </div>#}
+{#       <div class="col-lg-3 col-md-6 col-sm-6 team-row-grid">#}
+{#          <div class="team-grid ">#}
+{#             <div class="team-image mb-3">#}
+{#                <img src="{% static 'images/utku.JPEG' %}" alt="" class="img-fluid" style="width: 320px; height: 340px;">#}
+{#                <div class="social-icons">#}
+{#                   <a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-linkedin" aria-hidden="true"></span></a>#}
+{#                   <a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>#}
+{#                </div>#}
+{#             </div>#}
+{#             <h5 class="post-author_head"> <a href="{% url 'article:viewbyauthor' 3 %}" title="Yazarın Tüm Makeleleri">Utku Anıl Altın</a></h5>             #}
+{#          </div>#}
+{#       </div>#}
+{#    </div>#}
+{# </div>#}
+{#</section>#}
+{#<!--//team -->#}
+
+{% endblock body %}
+
+{% include 'includes/footer.html' %}

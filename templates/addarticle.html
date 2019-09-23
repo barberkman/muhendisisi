@@ -1,0 +1,26 @@
+{% load static %}
+
+{% include 'layout.html' %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+
+
+<div class="container">
+    <div class="col-md-8 offset-md-2">
+        <h3>Makale Oluştur</h3>
+        <hr>
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.media}}
+            {{form|crispy}}
+            <hr>
+            <button type = "submit" class = "btn btn-danger">Makale Ekle</button>
+            <br><br>
+        </form>
+    </div>
+</div>
+
+<div class="youtube-embed-wrapper" style="height:0; overflow:hidden; padding-bottom:56.25%; padding-top:30px; margin-left: 370px; position:relative"><iframe allow=";" allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/b1SdwHCte0c" style="position:absolute;width:50%;height:50%" width="640"></iframe></div>
+
+{% endblock body %}

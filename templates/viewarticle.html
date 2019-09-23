@@ -1,0 +1,36 @@
+{% load static %}
+
+{% include 'layout.html' %}
+
+{% block body %}
+
+{% if article.isConfirmed %}
+
+<div class="single">
+	 <div class="container">
+		  <div class="col-md-8 single-main">
+			  <div class="single-grid">
+                    <h3 style="color: #00AEFF">{{ article.title }}</h3>
+                    <br><br>
+					<p>{{article.content|safe}}</p>
+			  </div>
+                <ul class="comment-list">
+                   <h5 class="post-author_head">Yazar: <a href="{% url 'article:viewbyauthor' article.author_id %}" title="Yazarın Tüm Makeleleri">{{article.author.username}}</a></h5>
+                   <li><img src="images/avatar.png" class="img-responsive" alt="">
+                   <div class="desc">
+                   <p>Yayınlanma Tarihi: {{article.createdDate.date}}</p>
+                   </div>
+                   <div class="clearfix"></div>
+                   </li>
+                </ul>
+		  </div>
+         {% include 'includes/sidebar.html' %}
+          <div class="clearfix"></div>
+     </div>
+</div>
+
+{% else %}
+    <div class="alert alert-danger">Makale Onaylanmadı</div>
+{% endif %}
+
+{% endblock body %}

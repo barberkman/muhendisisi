@@ -1,0 +1,26 @@
+{% include "layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-8 content-main">
+				 <div class="content-grid">
+					 <div class="content-grid-info">
+                        <h3>Bize Ulaşın</h3>
+                        <hr>
+                        <p>Mail Adresimiz:</p>
+                        <p>muhendisisii@gmail.com</p>
+                     </div>
+                 </div>
+             </div>
+             {% include 'includes/sidebar.html' %}
+		  </div>
+	  </div>
+</div>
+
+{% endblock body %}
+
+{% include 'includes/footer.html' %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<div class="header">
+	 <div class="container">
+		  <div class="logo">
+			  <a href="{% url 'index' %}"><img src="{% static '/images/logo.png' %}" style="max-width: 70%; max-height: 100%;" title="" /></a>
+		  </div>
+			 <!---start-top-nav---->
+			 <div class="top-menu">
+				  <span class="menu"> </span>
+				   <ul>
+						<li class="active"><a href="{% url 'index' %}">ANASAYFA</a></li>
+						<li><a href="{% url 'about' %}">HAKKIMIZDA</a></li>
+						<li><a href="{% url 'contact' %}">İLETİŞİM</a></li>
+
+                        {% if request.user.is_authenticated %}
+						    <div class="clearfix"> </div>
+                            {% if request.user.groups.all.0.name == 'Admin' or request.user.groups.all.0.name == 'Editör' %}
+                                <li><a href="{% url 'article:confirmation' %}">Onay Paneli</a></li>
+                                <li><a href="{% url 'article:dashboard' %}">Kontrol Paneli</a></li>
+                                <li><a href="{% url 'user:logout' %}">Çıkış Yap</a></li>
+
+                            {% else %}
+                                <li><a href="{% url 'article:dashboard' %}">Kontrol Paneli</a></li>
+                                <li><a href="{% url 'user:logout' %}">Çıkış Yap</a></li>
+                            {% endif %}
+                        {% endif %}
+
+				 </ul>
+			 </div>
+			 <div class="clearfix"></div>
+					<script>
+					$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+					});
+					</script>
+				<!---//End-top-nav---->
+	 </div>
+</div>

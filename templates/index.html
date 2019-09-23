@@ -1,0 +1,54 @@
+{% load static %}
+
+{% include 'layout.html' %}
+
+{% block body %}
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-8 content-main">
+				 <div class="content-grid">
+                    {% if articles %}
+                        {% for article in articles %}
+                            {% if article.isConfirmed %}
+                                <!-- Page Content -->
+                                <div class="content-grid-info">
+                                    <!-- Preview Image -->
+                                    {% if article.mainImage %}
+                                        <a href="{% url 'article:article' article.id %}">
+                                            <img src="{{article.mainImage.url}}" style="width: 90%; max-height: 400px; margin-left: 30px;" />
+                                        </a>
+                                    {% endif %}
+                                    <div class="post-info">
+                                        <h4><a href="{% url 'article:article' article.id %}">{{article.title}}</a> {{article.author.username}}, {{article.createdDate.date}}</h4>
+
+                                        {% if article.preview %}
+                                            <p>{{article.preview|safe}}</p>
+                                        {% endif %}
+
+                                        <a href="{% url 'article:article' article.id %}"><span></span>DEVAMINI OKU</a>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="content-grid-info">
+                                    <div class="post-info">
+                                        <h4>>Makale onay bekliyor</h4>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <div class="alert alert-danger">Makale Bulunmamaktadır</div>
+                    {% endif %}
+				 </div>
+			  </div>
+
+             {% include 'includes/sidebar.html' %}
+
+		  </div>
+	  </div>
+</div>
+
+{% endblock body %}
+
+{% include 'includes/footer.html' %}
